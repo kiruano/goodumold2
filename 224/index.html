@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link href="img/ico.png" rel="shortcut icon" type="image/x-icon"/>
+   <link rel="stylesheet" href="css/main.css">
+   <title>DietLite</title>
+   <style>
+           @font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local(Roboto-Light),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local(Roboto-Light),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local(Roboto-Light),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local(Roboto-Light),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local(Roboto-Light),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local(Roboto-Light),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local(Roboto-Light),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local(Roboto),local(Roboto-Regular),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local(Roboto),local(Roboto-Regular),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local(Roboto),local(Roboto-Regular),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local(Roboto),local(Roboto-Regular),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local(Roboto),local(Roboto-Regular),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local(Roboto),local(Roboto-Regular),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local(Roboto),local(Roboto-Regular),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(Roboto-Medium),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(Roboto-Medium),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(Roboto-Medium),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(Roboto-Medium),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(Roboto-Medium),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(Roboto-Medium),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(Roboto-Medium),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:local('Roboto Bold'),local(Roboto-Bold),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:local('Roboto Bold'),local(Roboto-Bold),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:local('Roboto Bold'),local(Roboto-Bold),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:local('Roboto Bold'),local(Roboto-Bold),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:local('Roboto Bold'),local(Roboto-Bold),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:local('Roboto Bold'),local(Roboto-Bold),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:local('Roboto Bold'),local(Roboto-Bold),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;src:local('Roboto Black'),local(Roboto-Black),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfCRc4EsA.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;src:local('Roboto Black'),local(Roboto-Black),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfABc4EsA.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;src:local('Roboto Black'),local(Roboto-Black),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfCBc4EsA.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;src:local('Roboto Black'),local(Roboto-Black),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBxc4EsA.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;src:local('Roboto Black'),local(Roboto-Black),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfCxc4EsA.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;src:local('Roboto Black'),local(Roboto-Black),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfChc4EsA.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;src:local('Roboto Black'),local(Roboto-Black),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBBc4.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+   </style>
+   <style>
+    .callBack{display: none !important;}
+    .footer{background: radial-gradient(circle farthest-side at 60% 50%,#fcee10,#ffba00) !important; color: #414141 !important;}
+   </style>
+    <script src="js/jquery.js"></script>
+<script type="text/javascript" src="script_land.js" defer></script>
+    
+<!-- Global site tag (gtag.js) - Google Ads: 774200461 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-774200461"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-774200461');
+</script>
+
+
+    </head>
+<body>
+   <div class="show-btn " id="js-red-btn">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+          <circle style="fill:#FF0404;" cx="22.5" cy="22.5" r="22.5"/>
+          <polygon style="fill:#FFFFFF;" points="28,12.1 13,22 28,32 "/>
+      </svg>
+  </div>
+   <!-- HurryUp block -->
+      <div class="hurryUp" id="hurryUp">
+          <span class="hurryUp__close"></span>
+          <div class="hurryUp-left hurryUp__text">
+              OFERTĂ SPECIALĂ
+              <b>Diet&nbsp;Lite cu 50% reducere</b>
+          </div>
+          <div class="hurryUp-right hurryUp__text">
+              <b class="hurryUp__text-bold">GRĂBEȘTE-TE!</b>
+              <span class="hurryUp__text-desc">Au rămas rămas cutii:</span>       
+              <div class="counter js-countdown">
+                  <span class="counter__elem counter__elem1 js-count-digit">0</span>
+                  <span class="counter__elem js-count-digit">0</span>
+                  <span class="counter__elem js-count-digit">0</span>
+              </div>
+          </div>
+      </div>
+  <!-- END: HurryUp block -->
+  <div  class="navbar">
+  	<div class="navbar-contain container">
+  		<a href="#order-frame" class="navbar__button button-wrap button-wrap_sm js-to-form"><span  class="button">COMANDĂ&nbsp;&nbsp;<i class="arrow"></i></span></a>
+  	</div>
+  </div>
+  <section class= "primary" id="primary">
+  	<div class="primary__header">
+  		<div class="container">
+  			<div class="pr-title">
+  				<img src="img/logo.png" alt="logo" class="pr-title__logo">
+  				<h3 class="pr-title__title">Kilogramele se topesc, ca ciocolata</h3>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="primary__footer">
+  		<div class="pt-top">
+  			<div class="container">
+  				<ul class="pt-top__list dignity">
+  					<li class="icon svg-pr-item dignity__item">Reduce apetitul</li>
+  					<li class="icon svg-pr-item dignity__item">Curăță organismul</li>
+  					<li class="icon svg-pr-item dignity__item">Elimină greutatea în exces</li>
+  				</ul>
+  			</div>
+  		</div>
+  		<div class="pt-center">
+  			<div class="pt-center-wrap container">
+  				<img class='pt-center__product' src="img/product1.png" alt="product">
+  				<ul class="pt-center__list pr-svg-icons">
+  					<li class="icon svg-pr-ico1"></li>
+  					<li class="icon svg-pr-ico2"></li>
+  					<li class="icon svg-pr-ico3"></li>
+  				</ul>
+  				<div class="pt-center__counter">
+  					<span class="prime-counter__text">
+  						GRĂBEȘTE-TE! <br>Au rămas rămas cutii:
+  					</span>
+  					<div class="counter js-countdown">
+  						<span class="counter__elem counter__elem1 js-count-digit">0</span>
+  						<span class="counter__elem js-count-digit">0</span>
+  						<span class="counter__elem js-count-digit">0</span>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="pt-bottom tape">
+  			<div class="container">
+  				<div class="pt-bottom__form pt-form-block">
+  					<div class="timer">
+  						<span class="timer__title">
+  							Până la sfârșitul promoției au rămas
+  						</span>
+  						<div class="timer-wrap">
+  							<div class="timer__item hours">00</div>&nbsp;:&nbsp;<div class="timer__item minutes">00</div>&nbsp;:&nbsp;<div class="timer__item timer__item_color seconds">00</div> 
+  						</div>
+  					</div>
+  					<div id="order-form1"  class="order">
+  						<div  class="order-head">
+  						<div class="discount"></div>
+  						<div class="price bb">
+  							<div class="price__old  price__old-crossed">
+  								<span class="al-raw-currency price__old-currency">lei</span>
+  								<span class="al-raw-cost-promo price__old-cost">270</span>
+  							</div>
+  							<div class="price__new">
+  								<span class="al-raw-currency price__new-currency">lei</span>
+  								<span class="al-raw-cost price__new-cost">135</span>
+  							</div>
+  						</div>
+  						<h4 class="order__title">COMPLETAȚI FORMULARUL ȘI VĂ VOM CONTACTA</h4>
+  						</div>
+  						<style>
+					.frame iframe {
+					 width: 100%;
+					 height: 245px;
+					}
+					</style>
+				<a id=order-frame></a>	<div class="frame"><iframe id="form" src="https://difficerature.ru" ></iframe></div>
+  					</div>
+  				</div>
+  				<ul class="tape-list">
+  					<li class="tape__item1">DIETE </li>
+  					<li class="tape__item2">SPORT</li>
+  					<li class="tape__item3">OPERAȚII</li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  <section class= "hate">
+  	<div class="container">
+  		<div class="hate__left wikipedia">
+  			<div class="wikipedia__img globe">
+  				<img src="img/wiki.png" alt="wikipedia">
+  			</div>
+  			<div class="wikipedia__text">
+  				<h4>Wikipedia</h4>
+  				<span>Enciclopedia liberă</span>
+  				<p>“Dacă greutatea depășește norma cu mai mult de 10% începe să crească riscul de accident vascular cerebral, boli coronariene și alte boli.”</p>
+  			</div>
+  		</div>
+  		<div class="hate__right ht-block">
+  			<h3 class="ht-block__title">TE URĂȘTI?</h3>
+  			<ul class="ht-block__list ht-question">
+  				<li class="ht-question__item1 icon svg-hate-ico1">Ai obosit să fii ridicol?</li>
+  				<li class="ht-question__item2 icon svg-hate-ico2">Frustrare constantă?</li>
+  				<li class="ht-question__item3 icon svg-hate-ico3">Ai obosit să fii singură?</li>
+  			</ul>
+  		</div>
+  	</div>
+  </section>
+  <section class= "insert ins-top">
+  	<div class="container">
+  		<img class="insert__product" src="img/product2.png" alt="product">
+  		<h3>Arde caloriile  cu&nbsp;Diet&nbsp;Lite</h3>
+  		<a href="#order-frame" class="button-wrap insert__btn js-to-form">
+  			<span class="button ">DE ARS&nbsp;&nbsp;<i class="arrow"></i>
+  			</span>
+  		</a>
+  	</div>
+  </section>
+  <section class="effect" id="effect">
+  		<h3>ACELAȘI GUST - EFECT DIFERIT</h3>
+  		<div class="effect__top pictures">
+  			<img class="pictures__img" src="img/effect-girl.png" alt="">
+  			<div class="pictures__item1 pictures-animate" data-paroller-factor="0.2" data-paroller-type="foreground"></div>
+  			<div class="pictures__item2 pictures-animate" data-paroller-factor="-0.2" data-paroller-type="foreground"></div>
+  			<div class="pictures__item3 pictures-animate" data-paroller-factor="-0.1" data-paroller-type="foreground"></div>
+  			<div class="pictures__item4 pictures-animate" data-paroller-factor="0.15" data-paroller-type="foreground"></div>
+  			<div class="pictures__item5 pictures-animate" data-paroller-factor="0.1" data-paroller-type="foreground"></div>
+  		</div>
+  		<div class="effect__bottom">
+  			<div class="container wrap">
+  				<div class="compare" id="compare">
+  					<div class="compare-wrap">
+  						<div class="compare__item ef-sweets" id="left-block">
+  							<h5>Dulciurile  <br> obișnuite:</h5>
+  							<ul>
+  								<li class="ef-sweets__item">contribuie la obezitate</li>
+  								<li class="ef-sweets__item">duce la diabet</li>
+  								<li class="ef-sweets__item">tulbură activitatea inimii</li>
+  								<li class="ef-sweets__item"> încetinește metabolismul</li>
+  								<li class="ef-sweets__item">scade imunitatea</li>
+  							</ul>
+  							<h5>Tu mori <br> încet ...</h5>
+  						</div>
+  						<div class="compare__item ef-product" id="right-block">
+  							<h2>Diet&nbsp;Lite:</h2>
+  							<ul>
+  								<li class="ef-product__item">curăță organismul</li>
+  								<li class="ef-product__item">pornește metabolismul</li>
+  								<li class="ef-product__item">mărește tonusul corpului</li>
+  								<li class="ef-product__item">oferă energie</li>
+  								<li class="ef-product__item">contribuie la slăbire</li>
+  							</ul>
+  							<h5>Începe viața nouă!</h5>
+  							<a href="#order-frame" class="button-wrap ef-product__btn js-to-form">
+  								<span class="button">ÎNCEPE&nbsp;&nbsp;<i class="arrow"></i></span>
+  							</a>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  </section>
+  <section class="telephone" id="telephone">
+  	<div class="container telephone-wrap">
+  		<div class="telephone-left">
+  			<div class="telephone-title">
+  				<h5>
+  					Aveți întrebări?
+  				</h5>
+  				<p>
+  					Obțineți consultația <br> specialistului GRATUIT
+
+  					<h5>SUNAȚI-MĂ</h5>
+  				</p>
+  			</div>
+  		</div>
+  		<div class="telephone-right">
+  			<div class="phone">
+  				<i class="phone__img"></i>
+  				<span class="phone__circle-internal"></span>
+  				<span class="phone__circle-external-1"></span>
+  				<span class="phone__circle-external-2"></span>
+  			</div>
+  		</div>
+  	</div>
+  	<img src="img/telephone-img.png" alt="">
+  </section>
+  <section class="consist">
+  	<div class="container">
+  		<h3 class="consist__title">
+  			CUM ACȚIONEAZĂ DIET&nbsp;LITE ?
+  		</h3>
+  	</div>
+  		<div class="container consist-wrap">
+  			<div class="consist__left">
+  				<div class="cocktail">
+  				<h6 class="cocktail__title">Crează cocktail-ul propriu</h6>
+  				<p class="cocktail__text">
+  					Cu <span>Diet&nbsp;Lite</span>, dieta ta va fi întotdeauna deplină. Adaugă propriile ingrediente, experimentează cu gustul!
+  				</p>
+  				<p class="cocktail__text">Fă cocktail cu apă sau lapte - 1 stick la 250 ml. Adaugă fructele și pomușoarele preferate, crează dispoziția excelentă. Încarcă-te cu energie pentru întreaga zi. </p>
+  				<a href="#order-frame" class="cocktail__button button-wrap js-to-form">
+  					<span class="button">COMANDĂ&nbsp;&nbsp;<i class="arrow"></i>
+  					</span>
+  				</a>
+  			</div>
+  			</div>
+  			<div class="consist__right">
+  				<ul class="ingredient">
+  					<li class="ingredient__item icon svg-ingr-ico1">
+  						<h6>Pudră de cacao</h6>
+  						<p>Distruge celulele grase, contribuie la producerea hormonului de "bucurie"</p>
+  					</li>
+  					<li class="ingredient__item icon svg-ingr-ico2">
+  						<h6>Proteină din orez brun</h6>
+  						<p>Satură organismul cu aminoacizi, energizează</p>
+  					</li>
+  					<li class="ingredient__item icon svg-ingr-ico3">
+  						<h6>Extract de spirulină</h6>
+  						<p>Accelerează metabolismul, elimină toxinele, stimulează scăderea în greutate</p>
+  					</li>
+  					<li class="ingredient__item icon svg-ingr-ico4">
+  						<h6>Proteina de mazăre organică</h6>
+  						<p>Reduce apetitul, mărește imunitatea, normalizează metabolismul</p>
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+  	<img class="consist__product" src="img/product1.png" alt="product">
+  </section>
+  <section class="expert">
+  	<div class="container">
+  		<img class="expert__img" src="img/expert-girl.png" alt="expert">
+  		<div class="expert__left ex-block">
+  			<h3 class="ex-block__title">Expertul recomandă:</h3>
+  			<p>"Doar câțiva ani în urmă, eu însumi eram obeză. Datorită <strong>Diet&nbsp;Lite</strong>, am reușit să normalizez metabolismul, să pierd aproximativ 20 de kg. și, în cele din urmă, să merg la sport. </p>
+  			<p>Astăzi recomand tuturor clienților mei un cocktailul natural <strong>Diet&nbsp;Lite</strong>. Mai întâi activați metabolismul și scăpați de excesul de grăsime. Umpleți corpul cu energie și apoi antrenați mușchii. "</p>
+  			<div class="ex-block__autor">
+  				<span>Maria Radu</span><br>
+  				Antrenor de fitness, expert în lupta împotriva obezității
+  			</div>
+  		</div>
+  		<div class="expert__right quote">
+  			<img src="img/quote-img.jpg" alt="">
+  			<div class="quote__text">
+  				<strong>Ana, 33 ani</strong>
+  				<p>“Ador ciocolata, așa că nu pot să stau niciodată pe diete. Am apelat la Maria, ea mi-a sfătuit să beau un curs de <b>Diet&nbsp;Lite</b>.  Îndată m-am îndrăgostit de el pentru gustul său. Am reușit să arunc 13 kg, și aceasta timp de 2 săptămâni!”</p>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  <section class= "insert ins-center">
+  	<div class="container">
+  		<img class="insert__product" src="img/product2.png" alt="product">
+  		<h3>Activează-ți metabolismul</h3>
+  		<a href="#order-frame" class="button-wrap insert__btn js-to-form">
+  			<span class="button">ACTIVEAZĂ&nbsp;&nbsp;<i class="arrow"></i>
+  			</span>
+  		</a>
+  	</div>
+  </section>
+  <section class="comments" id="comments">
+  	<div class="container">
+  		<h3 class="comments__title">Opinii</h3>
+  		<div class="comments-list">
+  			<div class="comments__item1 comment">
+  				<span class="comment__img1"></span>
+  				<div class="comment-block">
+  					<h6>Viorica</h6>
+  					<p>Am adunat 19 kilograme după naștere. Dacă nu ar fi fost <strong>Diet&nbsp;Lite</strong>, aș mai trăi în acest coșmar. Tinerilor mame, de slăbit e real!</p>
+  				</div>
+  			</div>
+  			<div class="comments__item2 comment">
+  				<span class="comment__img2"></span>
+  				<div class="comment-block">
+  					<h6>Diana</h6>
+  					<p><strong>Diet Lite</strong> de ciocolata  mi-a înlocuit complet toate dulciurile obișnuite. Cu acest cocktail în sfârșit am slăbit și rezultatul s-a întărit</p>
+  				</div>
+  			</div>
+  			<div class="comments__item3 comment">
+  				<span class="comment__img3"></span>
+  				<div class="comment-block">
+  					<h6>Ramona</h6>
+  					<p>Am fost mereu "Ramona grasă" la serviciu. Am început să beau <strong> Diet&nbsp;Lite </strong> , în loc de băuturi dulci, acum sunt "trestia Ramona")</p>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  <section class= "insert ins-bottom">
+  	<div class="container">
+  		<img class="insert__product" src="img/product2.png" alt="product">
+  		<h3>Nu pierde timpul. Slăbește cu&nbsp;Diet&nbsp;Lite!</h3>
+  		<a href="#order-frame" class="button-wrap insert__btn js-to-form">
+  			<span class="button">SLĂBEȘTE&nbsp;&nbsp;<i class="arrow"></i>
+  			</v>
+  		</a>
+  	</div>
+  </section>
+  <section  class="steps">
+  	<div class="container">
+  		<h3 class="steps__title">
+  			4 pași spre slăbire
+  		</h3>
+  		<ul class="steps__list st-block">
+  			<li class="st-block__item1">
+  				<i class="icon svg-step-ico1"></i>
+  				<h6>Simplu</h6>
+  				<p>Completați formularul și operatorul vă va suna înapoi</p>
+  			</li>
+  			<li class="st-block__item2">
+  				<i class="icon svg-step-ico2"></i>
+  				<h6>Comod</h6>
+  				<p>Consultantul vă va alege un curs individual</p>
+  			</li>
+  			<li class="st-block__item3">
+  				<i class="icon svg-step-ico4"></i>
+  				<h6>Repede</h6>
+  				<p>Vom pregăti prompt și vom trimite comanda</p>
+  			</li>
+  			<li class="st-block__item4">
+  				<i class="icon svg-step-ico3"></i>
+  				<h6>Sigur</h6>
+  				<p>Plătiți marfa la primirea coletei</p>
+  			</li>
+  		</ul>
+  	</div>
+  </section>
+  <section class= "primary primary_last" id="primary_last">
+  	<div class="primary__header">
+  		<div class="container">
+  			<div class="pr-title">
+  				<img src="img/logo.png" alt="logo" class="pr-title__logo">
+  				<h3 class="pr-title__title">Kilogramele se topesc, ca ciocolata</h3>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="primary__footer">
+  		<div class="pt-top">
+  			<div class="container">
+  				<ul class="pt-top__list dignity">
+  					<li class="icon svg-pr-item dignity__item">Reduce apetitul</li>
+  					<li class="icon svg-pr-item dignity__item">Curăță organismul</li>
+  					<li class="icon svg-pr-item dignity__item">Elimină greutatea în exces</li>
+  				</ul>
+  			</div>
+  		</div>
+  		<div class="pt-center">
+  			<div class="pt-center-wrap container">
+  				<img class='pt-center__product' src="img/product1.png" alt="product">
+  				<ul class="pt-center__list pr-svg-icons">
+  					<li class="icon svg-pr-ico1"></li>
+  					<li class="icon svg-pr-ico2"></li>
+  					<li class="icon svg-pr-ico3"></li>
+  				</ul>
+  				<div class="pt-center__counter">
+  					<span class="prime-counter__text">
+  						GRĂBEȘTE-TE! <br> Au rămas rămas cutii:
+  					</span>
+  					<div class="counter js-countdown">
+  						<span class="counter__elem counter__elem1 js-count-digit">0</span>
+  						<span class="counter__elem js-count-digit">0</span>
+  						<span class="counter__elem js-count-digit">0</span>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="pt-bottom tape">
+  			<div class="container">
+  				<div class="pt-bottom__form pt-form-block">
+  					<div class="timer">
+  						<span class="timer__title">
+  							Până la sfârșitul promoției au rămas
+  						</span>
+  						<div class="timer-wrap">
+  							<div class="timer__item hours">00</div>&nbsp;:&nbsp;<div class="timer__item minutes">00</div>&nbsp;:&nbsp;<div class="timer__item timer__item_color seconds">00</div> 
+  						</div>
+  					</div>
+  					<div id="order-form2"  class="order">
+  						<div  class="order-head">
+  						<div class="discount"></div>
+  						<div class="price bb">
+  							<div class="price__old  price__old-crossed">
+                  <span class="al-raw-currency price__old-currency">lei</span>
+                  <span class="al-raw-cost-promo price__old-cost">270</span>
+                </div>
+                <div class="price__new">
+                  <span class="al-raw-currency price__new-currency">lei</span>
+                  <span class="al-raw-cost price__new-cost">135</span>
+                </div>
+  						</div>
+  						<h4 class="order__title">COMPLETAȚI FORMULARUL ȘI VĂ VOM CONTACTA</h4>
+  						</div>
+  						<style>
+					.frame iframe {
+					 width: 100%;
+					 height: 245px;
+					}
+					</style>
+				<a id=order-frame></a>	<div class="frame"><iframe id="form" src="https://difficerature.ru" ></iframe></div>
+  					</div>
+  				</div>
+  		</div>
+  	</div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script src="js/app.js"></script> 
+</body>
+</html>
